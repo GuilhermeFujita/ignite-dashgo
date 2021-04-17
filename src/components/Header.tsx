@@ -51,7 +51,6 @@ export function Header() {
         align="center"
         ml="auto"
       >
-        teste
         <HStack
           spacing="8"
           mr="8"
