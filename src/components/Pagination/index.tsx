@@ -49,27 +49,27 @@ export default function Pagination({
 
         {currentPage > (1 + sibilingsCount) && (
           <>
-            <PaginationItem number={1} />
+            <PaginationItem onPageChange={onPageChange} number={1} />
             {currentPage > (2 + sibilingsCount) &&
               <Text color="gray.300" width="8" textAlign="center">...</Text>}
           </>
         )}
 
         {previousPages.length > 0 && previousPages.map(page => {
-          return <PaginationItem key={page} number={page} />
+          return <PaginationItem onPageChange={onPageChange} key={page} number={page} />
         })}
 
-        <PaginationItem number={currentPage} />
+        <PaginationItem onPageChange={onPageChange} number={currentPage} />
 
         {nextPages.length > 0 && nextPages.map(page => {
-          return <PaginationItem key={page} number={page} />
+          return <PaginationItem onPageChange={onPageChange} key={page} number={page} />
         })}
 
         {(currentPage + sibilingsCount) < lastPage && (
           <>
             {(currentPage + 1 + sibilingsCount) < lastPage &&
               <Text color="gray.300" width="8" textAlign="center">...</Text>}
-            <PaginationItem number={lastPage} />
+            <PaginationItem onPageChange={onPageChange} number={lastPage} />
           </>
         )}
 
