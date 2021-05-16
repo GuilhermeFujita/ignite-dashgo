@@ -53,7 +53,7 @@ export default function CreateUser() {
             </SimpleGrid>
 
             <SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%">
-              <Input name="password" type="password " label="Senha" {...register('password')} error={errors.password} />
+              <Input name="password" type="password" label="Senha" {...register('password')} error={errors.password} />
               <Input name="password_confirmation" type="password" label="Confirmação de senha" {...register('password_confirmation')} error={errors.password_confirmation} />
             </SimpleGrid>
           </VStack>
